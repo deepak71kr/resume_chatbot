@@ -28,7 +28,7 @@ app.add_middleware(
 # Allow your React app to communicate with this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # In production, change "*" to your portfolio's URL (e.g., "https://deepak-portfolio.com")
+    allow_origins=["https://portfolio-with-chatbot-amber.vercel.app/"], # In production, change "*" to your portfolio's URL (e.g., "https://deepak-portfolio.com")
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
