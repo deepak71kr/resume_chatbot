@@ -16,19 +16,10 @@ from langchain_core.messages import HumanMessage, AIMessage
 load_dotenv()
 app = FastAPI(title="Resume Chatbot API")
 
-## middleware for deployment (for CORS)
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["https://portfolio-with-chatbot-amber.vercel.app/"], # <-- Put your actual deployed React URL here
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
 # Allow your React app to communicate with this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://portfolio-with-chatbot-amber.vercel.app/"], # In production, change "*" to your portfolio's URL (e.g., "https://deepak-portfolio.com")
+    allow_origins=["https://portfolio-with-chatbot-amber.vercel.app"], # No trailing slash for CORS origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
