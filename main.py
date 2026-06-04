@@ -19,7 +19,7 @@ app = FastAPI(title="Resume Chatbot API")
 ## middleware for deployment (for CORS)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://your-react-portfolio-url.com"], # <-- Put your actual deployed React URL here
+    allow_origins=["https://portfolio-with-chatbot-amber.vercel.app/"], # <-- Put your actual deployed React URL here
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
